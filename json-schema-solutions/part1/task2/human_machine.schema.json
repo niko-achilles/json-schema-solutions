@@ -31,7 +31,8 @@
       "type": "object",
       "properties": {
         "model": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^TX[1-9]{1}[0-9]+$"
         },
         "made": {
           "type": "string",
