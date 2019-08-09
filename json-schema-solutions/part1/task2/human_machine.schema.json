@@ -10,7 +10,8 @@
           "const": true
         },
         "gender": {
-          "type": "string"
+          "type": "string",
+          "enum": ["male", "female"]
         },
         "name": {
           "type": "string"
