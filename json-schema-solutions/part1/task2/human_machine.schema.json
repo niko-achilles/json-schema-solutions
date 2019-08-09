@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$comment": "Task 2: Validates humans and machines",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "human": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": ["human"],
+      "maxProperties": 4,
+      "dependencies": {
+        "human": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "DOB": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": ["name", "gender", "DOB"]
+        }
+      }
+    },
+    {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string"
+        }
+      },
+      "required": ["model"],
+      "maxProperties": 2,
+      "dependencies": {
+        "model": {
+          "properties": {
+            "made": {
+              "type": "string",
+              "format": "date"
+            }
+          },"required": ["made"]
+        }
+      }
+    }
+  ]
+}
