@@ -8,26 +8,22 @@
         "human": {
           "type": "boolean",
           "const": true
+        },
+        "gender": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "DOB": {
+          "type": "string",
+          "format": "date"
         }
       },
       "required": ["human"],
-      "maxProperties": 4,
+      "additionalProperties": false,
       "dependencies": {
-        "human": {
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "gender": {
-              "type": "string"
-            },
-            "DOB": {
-              "type": "string",
-              "format": "date"
-            }
-          },
-          "required": ["name", "gender", "DOB"]
-        }
+        "human": ["name", "gender", "DOB"]
       }
     },
     {
@@ -35,19 +31,16 @@
       "properties": {
         "model": {
           "type": "string"
+        },
+        "made": {
+          "type": "string",
+          "format": "date"
         }
       },
       "required": ["model"],
-      "maxProperties": 2,
+      "additionalProperties": false,
       "dependencies": {
-        "model": {
-          "properties": {
-            "made": {
-              "type": "string",
-              "format": "date"
-            }
-          },"required": ["made"]
-        }
+        "model": ["made"]
       }
     }
   ]

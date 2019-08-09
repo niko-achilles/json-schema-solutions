@@ -1,5 +1,7 @@
 [
-  { "human": true },
+  {
+    "human": true
+  },
   {
     "human": true,
     "name": "Jane",
@@ -37,6 +39,12 @@
     "human": true,
     "name": null,
     "gender": "female",
+    "DOB": "1985-08-12"
+  },
+  {
+    "human": true,
+    "name": "Jane",
+    "gender": null,
     "DOB": "1985-08-12"
   },
   {
