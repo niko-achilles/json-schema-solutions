@@ -10,6 +10,11 @@ const ajv = Ajv();
 
 const validate = ajv.compile(dateSchema);
 
+//2003 is not a leap year
+assert(!(validate("2003-02-29") && moment("2003-02-29").isAfter("1972-12-31")));
+//2004 is a leap year
+assert(validate("2004-02-29") && moment("2004-02-29").isAfter("1972-12-31"));
+
 assert(validate("1976-02-24") && moment("1976-02-24").isAfter("1972-12-31"));
 
 assert(validate("1980-01-21") && moment("1980-01-21").isAfter("1972-12-31"));
