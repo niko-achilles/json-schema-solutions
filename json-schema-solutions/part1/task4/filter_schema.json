@@ -1,0 +1,57 @@
+{
+  "title": "Task 3",
+  "description": "Schema to filter users",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "personal": {
+      "type": "object",
+      "properties": {
+        "gender": {
+          "type": "string",
+          "const": "male"
+        },
+        "age": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMaximum": 21
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 60
+            }
+          ]
+        }
+      }
+    },
+    "connections": {
+      "type": "array",
+      "maxItems": 5,
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "connType": {
+            "enum": ["friend", "colleague", "other"]
+          },
+          "relation": {
+            "not": {}
+          }
+        }
+      }
+    },
+    "feeds": {
+      "title": "feeds",
+      "description": "Feeds user subscribes to",
+      "type": "object",
+      "patternProperties": {
+        "^[A-Za-z]+$": {
+          "type": "boolean"
+        }
+      },
+      "maxProperties": 2,
+      "additionalProperties": false
+    }
+  }
+}
