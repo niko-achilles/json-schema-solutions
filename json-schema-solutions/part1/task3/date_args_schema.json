@@ -1,0 +1,52 @@
+{
+  "title": "Task 3",
+  "description": "Date constructor arguments",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "array",
+  "maxItems": 7,
+  "minItems":2,
+  "items": [
+    {
+      "$comment": "year",
+      "type": "integer",
+      "minimum": 1900
+    },
+    {
+      "$comment": "month",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 11
+    },
+    {
+      "$comment": "day",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 31
+    },
+    {
+      "$comment": "hour",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 23
+    },
+    {
+      "$comment": "minutes",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 59
+    },
+    {
+      "$comment": "seconds",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 59
+    },
+    {
+      "$comment": "ms",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 999
+    }
+  ],
+  "additionalItems": false
+}
