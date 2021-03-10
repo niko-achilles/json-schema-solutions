@@ -8,4 +8,4 @@ These repository contains my solution approaches to the examples and tasks from 
 
 ## JSON Schema validator
 
-[Ajv (JSON-Schema validator)](https://github.com/epoberezkin/ajv)
+[Ajv (JSON Schema validator)](https://github.com/epoberezkin/ajv)
